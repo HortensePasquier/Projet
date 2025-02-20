@@ -25,7 +25,7 @@ def tri_verticale(verticales):
     #Associe les photos verticales par paires 
     utilisee = set()
     paires = []
-    for (i1, tags1), (i2, tags2) in combinations(verticals, 2):
+    for (i1, tags1), (i2, tags2) in combinations(verticales, 2):
         if i1 not in utilisee and i2 not in utilisee:
             combined_tags = tags1 | tags2
             paires.append(((i1, i2), combined_tags))
