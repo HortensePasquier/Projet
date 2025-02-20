@@ -79,9 +79,9 @@ def optimise(slides):
     return ordre_slides, total_score
     
 
-def solve(photos, verticals):
+def solve(photos, verticales):
     #Créé et optimise l'ordre des diapositives, puis calcule le score final
-    slides = photos + tri_verticale(verticals)
+    slides = photos + tri_verticale(verticales)
     slides, total_score = optimise(slides)
     
     solution = [s[0] for s in slides]
@@ -102,8 +102,8 @@ def ecrire_solution(solution, output_file):
 
 if __name__ == "__main__":
     dataset_path = sys.argv[1]
-    photos, verticals = lire_fichier(dataset_path)
-    solution, total_score = solve(photos, verticals)
+    photos, verticales = lire_fichier(dataset_path)
+    solution, total_score = solve(photos, verticales)
     ecrire_solution(solution, "slideshow.sol")
 
     print(f" Solution enregistrée dans 'slideshow.sol' avec un score de {total_score} ")
