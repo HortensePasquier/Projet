@@ -90,7 +90,7 @@ def solve(photos, verticals):
 
     return solution, total_score
 
-def write_output(solution, output_file):
+def ecrire_solution(solution, output_file):
     #Écrit la solution optimisée dans un fichier 
     with open(output_file, 'w') as f:
         f.write(f"{len(solution)}\n")
@@ -104,6 +104,6 @@ if __name__ == "__main__":
     dataset_path = sys.argv[1]
     photos, verticals = lire_fichier(dataset_path)
     solution, total_score = solve(photos, verticals)
-    write_output(solution, "slideshow.sol")
+    ecrire_solution(solution, "slideshow.sol")
 
     print(f" Solution enregistrée dans 'slideshow.sol' avec un score de {total_score} ")
