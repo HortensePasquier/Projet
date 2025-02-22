@@ -26,9 +26,9 @@ def tri_verticale(verticales):
     paires = []
     while len(verticales) > 1:
         v1 = verticales.pop()
-        best_match = min(verticales, key=lambda v: len(v[1] & v1[1]))
-        verticales.remove(best_match)
-        paires.append(((v1[0], best_match[0]), v1[1] | best_match[1]))
+        best_duo = min(verticales, key=lambda v: len(v[1] & v1[1]))
+        verticales.remove(best_duo)
+        paires.append(((v1[0], best_duo[0]), v1[1] | best_duo[1]))
     return paires
 
 def facteur(tags1, tags2):
